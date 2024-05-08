@@ -1,0 +1,25 @@
+---
+import { Counter } from "./Counter"
+import HeaderButton from "./HeaderButton.astro"
+
+---
+
+<header transition:persist class="py-8 px-4 mx-auto max-w-xl lg:px-6">
+    <div class="mx-auto text-center mb-8 lg:mb-16">
+        <h2 class="mb-4 text-5cl tracking-tight font-extrabold text-white">SpaceX Launches🚀</h2>
+        <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+            All the information about SpaceX launches
+        </p>
+    </div>
+
+    <Counter client:visible/>
+    <Counter client:visible/>
+
+    <nav class="flex flex-col">
+        <HeaderButton class="text-white" href="/">Ultimos Lanzamientos</HeaderButton>        
+        <HeaderButton class="text-white" href="/about">about</HeaderButton>
+        <HeaderButton class="text-white" href="/oldest">Los mas viejos</HeaderButton>
+
+    </nav>
+
+</header>
